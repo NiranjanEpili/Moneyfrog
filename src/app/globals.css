@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --forest-primary: #0D3823;
+    --forest-deep: #061B10;
+    --forest-surface: #0F4628;
+    --forest-accent: #22C55E;
+    --gold-accent: #D4AF37;
+    --ivory-base: #FAF9F5;
+    --ivory-surface: #FFFFFF;
+    --ivory-muted: #F3F1E7;
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    --text-muted: #64748B;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  body {
+    background-color: var(--ivory-base);
+    color: var(--text-primary);
+    font-family: var(--font-plus-jakarta), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+  }
+
+  ::selection {
+    background-color: #15803D;
+    color: #FFFFFF;
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  /* Apple-style Double-Bezel Architecture */
+  .double-bezel {
+    @apply p-1 sm:p-1.5 md:p-2 rounded-2xl sm:rounded-[2rem] bg-black/[0.03] border border-black/[0.06] shadow-apple-sm transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)];
+  }
+
+  .double-bezel-inner {
+    @apply rounded-xl sm:rounded-[calc(2rem-0.45rem)] bg-white border border-black/[0.04] p-4 sm:p-6 md:p-8 shadow-inner-glow;
+  }
+
+  .double-bezel-dark {
+    @apply p-1 sm:p-1.5 md:p-2 rounded-2xl sm:rounded-[2rem] bg-white/[0.04] border border-white/[0.08] shadow-glass-emerald transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)];
+  }
+
+  .double-bezel-dark-inner {
+    @apply rounded-xl sm:rounded-[calc(2rem-0.45rem)] bg-[#0A2718]/90 border border-white/[0.06] p-4 sm:p-6 md:p-8;
+  }
+
+  /* 3D Perspective Card Container */
+  .perspective-container {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+  }
+
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+
+  .translate-z-10 {
+    transform: translateZ(10px);
+  }
+
+  .translate-z-20 {
+    transform: translateZ(20px);
+  }
+
+  .translate-z-30 {
+    transform: translateZ(30px);
+  }
+
+  /* Apple-style Floating Island Button */
+  .apple-pill-btn {
+    @apply inline-flex items-center gap-3 px-6 py-3.5 rounded-full font-medium text-sm transition-all duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] active:scale-[0.98];
+  }
+
+  /* Subtle noise background */
+  .bg-noise {
+    background-image: radial-gradient(rgba(13, 56, 35, 0.05) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F3F1E7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C7BEA0;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0D3823;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

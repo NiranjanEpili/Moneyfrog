@@ -1,0 +1,48 @@
+{
+  "name": "Moneyfrog — Private Wealth & Global Family Office",
+  "short_name": "Moneyfrog",
+  "description": "Disciplined wealth compounding, institutional PMS, AIFs, GIFT City USD investments, and cross-border portfolio advisory.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#03130B",
+  "theme_color": "#062013",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["finance", "business", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Wealth Consultation",
+      "short_name": "Consultation",
+      "description": "Schedule a strategic private wealth review with Moneyfrog",
+      "url": "/contact",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Investment Solutions",
+      "short_name": "Solutions",
+      "description": "Explore PMS, AIFs, GIFT City, and Mutual Funds",
+      "url": "/solutions",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
